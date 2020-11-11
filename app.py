@@ -7,11 +7,6 @@ from tkinter import *
 import pytube
 import subprocess
 
-# ---------  GUI(Graphical user interface)  --------- #
-root = Tk()
-root.title("YouTube Downloader")
-root.geometry("500x250")
-
 # -------------------  Functions  ------------------- #
 def download():
     link = str(entry.get())
@@ -29,6 +24,10 @@ def download():
 def opendir():
     subprocess.call("explorer .\\Downloads", shell=True)
 
+# ---------  GUI(Graphical user interface)  --------- #
+root = Tk()
+root.title("YouTube Downloader")
+root.geometry("500x250")
 
 frame = Frame(root, background="#1A3D56", width=5000, height=3200)
 frame.pack(expand=True)
