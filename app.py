@@ -1,6 +1,6 @@
 # ---------------  YouTube Downloader  -------------- #
 # author: Sayed Mohammad Rezaie -- 10.Nov.2020
-# github: @cdied --- email: cdiedwbh@gmail.com
+# github: @cdied
 
 # --------------------  imports  -------------------- #
 from tkinter import *
