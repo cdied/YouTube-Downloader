@@ -1,12 +1,18 @@
+# ---------------  YouTube Downloader  -------------- #
+# author: Sayed Mohammad Rezaie -- 10.Nov.2020
+# github: @cdied --- email: cdiedwbh@gmail.com
+
+# --------------------  imports  -------------------- #
 from tkinter import *
 import pytube
 import subprocess
 
+# ---------  GUI(Graphical user interface)  --------- #
 root = Tk()
 root.title("YouTube Downloader")
 root.geometry("500x250")
 
-
+# -------------------  Functions  ------------------- #
 def download():
     link = str(entry.get())
     yt = pytube.YouTube(link)
@@ -18,8 +24,7 @@ def download():
     Label(frame, text="Video Downloaded Succsesfully", background="#1A3D56", foreground="green", font=("Arial", 12)).place(relx=0.5, rely=0.6, anchor=CENTER)
     button = Button(frame, text="Open in File Explorer", command=lambda:opendir())
     button.place(relx=0.5, rely=0.8, width=130, height=30, anchor=CENTER)
-
-
+    
 
 def opendir():
     subprocess.call("explorer .\\Downloads", shell=True)
